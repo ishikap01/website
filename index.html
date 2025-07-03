@@ -6,16 +6,17 @@
     <title>E-Commerce website</title>
     <link rel="stylesheet" href="style.css">
     <script>
-    // Redirect if not logged in
-    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    const currentPage = location.pathname;
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const currentPage = window.location.pathname;
 
-    const publicPages = ["/login.html", "/register.html"];
+  const publicPages = ["/login.html", "/register.html"];
 
-    if (!loggedInUser && !publicPages.includes(currentPage)) {
-        window.location.href = "login.html";
-    }
+  // Redirect if not logged in and not already on login/register
+  if (!loggedInUser && !publicPages.includes(currentPage)) {
+    window.location.href = "login.html";
+  }
 </script>
+
 
 </head>
 <body>
