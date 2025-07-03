@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce website</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    // Redirect if not logged in
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const currentPage = location.pathname;
+
+    const publicPages = ["/login.html", "/register.html"];
+
+    if (!loggedInUser && !publicPages.includes(currentPage)) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px"></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <!-- Add inside <ul id="MenuItems"> -->
+                
+
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="products.html">Products</a> </li>
+                <li><a href="">About</a> </li>
+                <li><a href="">Contact</a> </li>
+                <li><a href="">Account</a> </li>
+                <li><a href="#" onclick="logoutUser()">Logout</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+        <!-- <li><a href="#" onclick="logoutUser()">Logout</a></li> -->
+
+        <img src="images/menu.png" class="menu" onclick="menutoggle()">    
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h1>Wear the Vibe!</h1>
+            <p>Whether you’re dressing up for a vibe or keeping it casual,<br> we've got the perfect look waiting for you. </p>
+            <br>
+            <a href="" class="btn">Explore</a>    
+        </div>
+        <div class="col-2">
+            <img src="images/image1.png" alt="">
+        </div>  
+    </div>
+    </div>
+    </div>
+
+<!---featured categories---------->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+            <div class="col-3">
+                <img src="images/category-1.jpg">
+            </div>
+            <div class="col-3">
+                <img src="images/category-2.jpg">
+            </div>
+            <div class="col-3">
+                <img src="images/category-3.jpg">
+            </div>
+        </div>
+        </div>
+        
+    </div>    
+<!--------featured categories---------->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="productdetails.html?id=1"><img src="images/product-1.jpg"></a>
+<h4><a href="productdetails.html?id=1">Red printed t-shirt</a></h4>
+
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+            <div class="col-4">
+                <a href="productdetails.html?id=2"><img src="images/product-2.jpg"></a>
+<h4><a href="productdetails.html?id=2">Black shoes</a></h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 350</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-3.jpg">
+                <h4>Track Pants</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 400</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-4.jpg">
+                <h4>Blue printed t-shirt</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+        </div>
+    </div>
+<!--------featured categories---------->
+    <div class="small-container">
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-5.jpg">
+                <h4>Red printed t-shirt</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-6.jpg">
+                <h4>Black shoes</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 350</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-7.jpg">
+                <h4>Track Pants</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 400</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-8.jpg">
+                <h4>Blue printed t-shirt</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-9.jpg">
+                <h4>Red printed t-shirt</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-10.jpg">
+                <h4>Black shoes</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 350</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-11.jpg">
+                <h4>Track Pants</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 400</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-12.jpg">
+                <h4>Blue printed t-shirt</h4>
+                <div class="rating">
+                     
+                </div>
+                <p>Rs 500</p>
+            </div>
+        </div>
+    </div>
+<!--offer------------>
+    <div class="offer">
+        <h2 class="title"> Offer</h2>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively avaliable on vybewear!</p>
+                    <h1> Smart band</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--footer------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3> download our app</h3>
+                <div class="logoapp">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png">
+                <p>.....</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>useful links</h3>
+                <br>
+                <ul>
+                    <li>Terms and conditions</li>
+                    <li>blog post</li>
+                    <li>return policy</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>follow us</h3>
+                <br>
+                <ul>
+                    <li>instagram</li>
+                    <li>linkedin</li>
+                    <li>facebook</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright 2025 </p>
+    </div>
+</div>
+<!--toggle menu-->
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight=="0px")
+    {
+        MenuItems.style.maxHeight="200px";
+    }
+    else{
+        MenuItems.style.maxHeight="0px";
+    }
+    }
+
+</script>
+<script src="auth.js"></script>
+
+</body>
+</html>
